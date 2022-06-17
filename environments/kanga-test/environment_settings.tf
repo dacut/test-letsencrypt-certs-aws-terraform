@@ -8,7 +8,10 @@ locals {
 }
 
 terraform {
-  backend "cloud" {
+  cloud {
     organization = "Ionosphere"
+    workspaces {
+      name = "test-letsencrypt-certs-aws-terraform"
+    }
   }
 }
