@@ -1,5 +1,4 @@
 provider "aws" {
-  alias               = "aws"
   allowed_account_ids = [var.account_id]
   region              = var.region
   default_tags {
@@ -8,7 +7,7 @@ provider "aws" {
 }
 
 provider "aws" {
-  alias               = "aws.use1"
+  alias               = "use1"
   allowed_account_ids = [var.account_id]
   region              = "us-east-1"
   default_tags {
